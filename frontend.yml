@@ -31,14 +31,3 @@
                  enable: true
 
 
-#echo -e "${color}extract frontend${nocolor}"
-#cd /usr/share/nginx/html
-#unzip /tmp/frontend.zip &>>/tmp/roboshop.log
-#stat_check $?
-#echo -e "${color}mupdating frontend roboshop configuration${nocolor}"
-#cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
-#stat_check $?
-#echo -e "${color}starting nginx server${nocolor}"
-#systemctl enable nginx &>>/tmp/roboshop.log
-#systemctl restart nginx &>>/tmp/roboshop.log
-#stat_check $?
