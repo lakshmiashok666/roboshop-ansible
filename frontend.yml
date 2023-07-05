@@ -1,5 +1,5 @@
 
- - name: frontend.yml
+ - name: setup frontend
    hosts: all
    become: yes
    tasks:
@@ -9,16 +9,16 @@
         state: latest
          - name: remove directory
            ansible.builtin.file:
-           path: /usr/share/nginx/html/
+           path: /usr/share/nginx/html
            state: absent
             - name: create directory
              ansible.builtin.file:
-             path: /usr/share/nginx/html/
+             path: /usr/share/nginx/html
              state: directory
               - name: download and extract frontend
                ansible.builtin.unarchive:
                  src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
-                 dest: /usr/share/nginx/html/
+                 dest: /usr/share/nginx/html
                  remote_src: yes
              - name: Copy roboshop configuration
                ansible.builtin.copy:
