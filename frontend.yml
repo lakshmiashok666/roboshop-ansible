@@ -7,17 +7,17 @@
       name: nginx
       state: latest
 
-  - name: remove directory
+  - name: Remove directory
     ansible.builtin.file:
      path: /usr/share/nginx/html
      state: absent
                         
-      - name: create directory
+      - name: Create directory
       ansible.builtin.file:
       path: /usr/share/nginx/html
       state: directory
 
-     - name: download and extract frontend
+     - name: Download and extract frontend
       ansible.builtin.unarchive:
       src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
       dest: /usr/share/nginx/html
@@ -28,7 +28,7 @@
       src: roboshop.conf
       dest: /etc/nginx/default.d/roboshop.conf
         
-          - name: service started
+          - name: Service started
             ansible.builtin.systemd:
             name: nginx
             state: restarted
