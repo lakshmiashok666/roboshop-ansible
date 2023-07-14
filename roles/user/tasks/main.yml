@@ -1,0 +1,14 @@
+ #source common.sh
+ #component=user
+ #nodejs
+ #mongo_load_schema
+
+ - name: Load nodejs
+   ansible.builtin.import_role:
+     name: common
+     task_form: nodejs
+
+ - name: Load Schema setup
+   ansible.builtin.import_role:
+        name: common
+        tasks_from: mongo.schema.setup.yml
