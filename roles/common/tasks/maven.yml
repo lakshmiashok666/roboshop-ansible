@@ -4,7 +4,7 @@
      name: maven
      state: installed
 
- - name:  app_pre_setup
+ - name:  app pre_requisite
    ansible.builtin.import_tasks:
      file: app_pre_setup
 
