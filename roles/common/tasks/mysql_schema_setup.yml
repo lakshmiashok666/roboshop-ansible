@@ -1,0 +1,11 @@
+
+
+ - name: install mysql client
+   ansibel.builtin.yum:
+     name: mysql
+     status: installed
+
+ - name: load schema
+   ansible.builtin.shell: mysql -h mysql-dev.devops73.in -uroot -pRoboShop@1 </app/schema/{{ component }}.sql
+
+

@@ -1,0 +1,4 @@
+  - name: load maven
+    ansible.builtin.import_task:
+        name: maven
+        file: maven
