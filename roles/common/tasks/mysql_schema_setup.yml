@@ -5,7 +5,7 @@
      name: mysql
      status: installed
 
- - name: load schema
+ - name: load Schema
    ansible.builtin.shell: mysql -h mysql-dev.devops73.in -uroot -pRoboShop@1 </app/schema/{{ component }}.sql
 
 
