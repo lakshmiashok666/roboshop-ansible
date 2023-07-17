@@ -9,10 +9,10 @@
    ansible.builtin.import_tasks:
      file: app_pre_setup
 
- - name: Download maven dependecies
+ - name: Download maven dependencies
    ansible.builtin.shell: mvn clean package; mv target/{{ component }}-1.0.jar {{ component }}.jar
    args:
-     chdir: /app
+      chdir: /app
 
  - name: mysql schema setup
    ansible.builtin.import_task:
