@@ -17,8 +17,6 @@
    ansible.builtin.import_task:
      file: mysql_schema_setup.yml
 
- - name: mysql systemd setup
-   ansible.builtin.systemd:
-     name: maven
-     state: restarted
-     enable: yes
+ - name: Systemd_setup
+   ansible.builtin.import_tasks:
+     file: systemd_setup.yml
