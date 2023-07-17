@@ -6,7 +6,7 @@
 
  - name:  app pre_requisite
    ansible.builtin.import_tasks:
-     file: app_pre_setup
+     file: app_pre_setup.yml
 
  - name: Download maven dependencies
    ansible.builtin.shell: mvn clean package; mv target/{{ component }}-1.0.jar {{ component }}.jar
@@ -15,7 +15,7 @@
 
  - name: mysql schema setup
    ansible.builtin.import_task:
-     file: mysql_schema_setup
+     file: mysql_schema_setup.yml
 
  - name: mysql systemd setup
    ansible.builtin.systemd:
