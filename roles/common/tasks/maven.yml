@@ -1,6 +1,6 @@
 
 
- - name: install maven
+ - name: Install maven
    ansible.builtin.yum:
      name: maven
      state: installed
@@ -14,7 +14,7 @@
    args:
      chdir: /app
 
- - name: mysql_schema_setup
+ - name: mysql schema setup
    ansible.builtin.import_task:
      file: mysql_schema_setup
 
