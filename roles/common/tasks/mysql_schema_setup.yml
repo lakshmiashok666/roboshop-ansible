@@ -1,7 +1,7 @@
 
 
- - name: install mysql client
-   ansibel.builtin.yum:
+ - name: Install mysql client
+   ansible.builtin.yum:
      name: mysql
      status: installed
 
