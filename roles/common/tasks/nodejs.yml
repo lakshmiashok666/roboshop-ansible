@@ -5,7 +5,7 @@
    ansible.builtin.yum:
      name: nodejs
      state: installed
- - name: App pre_requisites
+ - name: App pre-requisites
    ansible.builtin.import_tasks:
       file: app_pre_setup.yml
 
@@ -14,7 +14,7 @@
    args:
       chdir: /app
 
- - name: Systemd_setup
+ - name: Systemd-setup
    ansible.builtin.import_tasks:
      file: systemd_setup.yml
 
